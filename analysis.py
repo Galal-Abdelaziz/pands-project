@@ -12,7 +12,7 @@ import warnings  # Import the warnings library to suppress a warning message.
 warnings.filterwarnings("ignore", category=UserWarning)  # Ignore UserWarning messages.
 
 data = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv') # Load the Iris data set from the given URL.
-data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'variety'] # Renaming the columns of the data DataFrame, to make it easier to work with the dataset.
+data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species'] # Columns headers of the data DataFrame, to make it easier to work with the dataset.
 
 ## Save a summary of each variable to a text file.
 with open('summary.txt', 'w') as f:     
@@ -33,15 +33,16 @@ plt.savefig('histograms.png')  # Save the plot to a png file.
 
 ## Set the seaborn style and create a pairplot of each pair of variables.
 sns.set(rc={'figure.figsize':(10,10), 'figure.autolayout': True})
-sns.pairplot(data.drop('variety', axis=1), diag_kind='hist')  # Create a pairplot of each pair of variables, excluding the 'variety' column.
+#sns.pairplot(data.drop('species', axis=1), diag_kind='hist')  # Create a pairplot of each pair of variables, excluding the 'species' column.
+sns.pairplot(data, hue='species', diag_kind='hist')  # Create a pairplot of each pair of variables, excluding the species, with different colors for each species.
 plt.savefig('scatter_plots.png')  # Save the plot to a png file.
 
 ## Perform extra analysis plotting them and saving to the other_analysis txt file.
 # Calculate the correlation matrix.
-corr_matrix = data.drop('variety', axis=1).corr()
+corr_matrix = data.drop('species', axis=1).corr()
 
-# Calculate the mean and standard deviation of each variable for each variety.
-grouped = data.groupby('variety').describe()
+# Calculate the mean and standard deviation of each variable for each species.
+grouped = data.groupby('species').describe()
 
 # Plot the correlation matrix as a heatmap.
 plt.figure(figsize=(10, 10))  # Create a new figure with a size of 10x10 inches.
@@ -49,28 +50,28 @@ sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', square=True)  # Use seabor
 plt.title('Correlation Matrix')  # Set the title of the plot.
 plt.savefig('correlation_matrix.png')  # Save the plot to a file named 'correlation_matrix.png'.
 
-# Plot the mean and standard deviation of each variable for each variety as scatter plots.
+# Plot the mean and standard deviation of each variable for each species as scatter plots.
 plt.figure(figsize=(10, 10))  # Create a new figure with a size of 10x10 inches.
-sns.scatterplot(x='sepal_length', y='sepal_width', hue='variety', data=data)  # Use seaborn's scatterplot function to plot sepal length vs sepal width.
+sns.scatterplot(x='sepal_length', y='sepal_width', hue='species', data=data)  # Use seaborn's scatterplot function to plot sepal length vs sepal width.
 plt.title('Sepal Length vs Sepal Width')  # Set the title of the plot.
 plt.savefig('sepal_length_vs_sepal_width.png')  # Save the plot to a file named 'sepal_length_vs_sepal_width.png'.
 
 plt.figure(figsize=(10, 10))  # Create a new figure with a size of 10x10 inches.
-sns.scatterplot(x='petal_length', y='petal_width', hue='variety', data=data)  # Use seaborn's scatterplot function to plot petal length vs petal width.
+sns.scatterplot(x='petal_length', y='petal_width', hue='species', data=data)  # Use seaborn's scatterplot function to plot petal length vs petal width.
 plt.title('Petal Length vs Petal Width')  # Set the title of the plot.
 plt.savefig('petal_length_vs_petal_width.png')  # Save the plot to a file named 'petal_length_vs_petal_width.png'.
 
-# Plot the number of samples of each variety as a pie chart
+# Plot the number of samples of each species as a pie chart
 plt.figure(figsize=(8, 8))  # Create a new figure with a size of 8x8 inches
-plt.pie(data['variety'].value_counts(), labels=data['variety'].unique(), autopct='%1.1f%%')  # Use matplotlib's pie function to plot the number of samples of each variety.
+plt.pie(data['species'].value_counts(), labels=data['species'].unique(), autopct='%1.1f%%')  # Use matplotlib's pie function to plot the number of samples of each species.
 plt.title('Number of Samples of Each Variety')  # Set the title of the plot.
 plt.savefig('number_of_samples.png')  # Save the plot to a file named 'number_of_samples.png'.
 
-# Save the correlation matrix, mean and standard deviation, and number of samples of each variety to a text file.
+# Save the correlation matrix, mean and standard deviation, and number of samples of each species to a text file.
 with open('other_analysis.txt', 'w') as f:
     f.write('Correlation matrix:\n\n') # Write the correlation matrix to the file.
     f.write(corr_matrix.to_string())
-    f.write('\n\nMean and standard deviation of each variable for each variety:\n\n')  # Write the mean and standard deviation of each variable for each variety to the file.
+    f.write('\n\nMean and standard deviation of each variable for each species:\n\n')  # Write the mean and standard deviation of each variable for each species to the file.
     f.write(grouped.to_string())
-    f.write('\n\nNumber of samples of each variety:\n\n') # Write the number of samples of each variety to the file.
-    f.write(data['variety'].value_counts().to_string())
+    f.write('\n\nNumber of samples of each species:\n\n') # Write the number of samples of each species to the file.
+    f.write(data['species'].value_counts().to_string())
