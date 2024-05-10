@@ -97,6 +97,30 @@ The Iris dataset contains two types of variables:
 
 ***
 
+### References:
+
+* The data set found [on GitHub](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv).
+* Information about plotting found [on RealPython](https://realpython.com/python-matplotlib-guide/#understanding-pltsubplots-notation).
+* Pandas guides on Pandas [1](https://pandas.pydata.org/docs/user_guide/index.html#user-guide), [2](https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe), [3](https://pandas.pydata.org/docs/user_guide/10min.html#plotting), [4](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html).
+* Information about the data set found on [Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set), [GeeksforGeeks](https://www.geeksforgeeks.org/iris-dataset/), [ARCCA](https://arcca.github.io/An-Introduction-to-Machine-Learning-Applications/03-scikit-learn-iris-dataset/index.html), [Embedded Robotics](https://www.embedded-robotics.com/iris-dataset-classification/), [scikit-learn](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html), [Towards Data Science](https://towardsdatascience.com/an-eda-walkthrough-the-iris-dataset-3f79246266c1).
+
+***
+
+### Libraries:
+
+* __Pandas__: Imported the pandas library for data manipulation.
+* __Seaborn__: Imported the seaborn library for visualization.
+* __Matplotlib.pyplot__: Imported the matplotlib library for visualization.
+* __Warnings__: Imported the warnings library to suppress a warning message.
+
+***
+
+### Technologies:
+
+* Python 3.11.5 available [here](https://www.anaconda.com/download)
+* Visual Studio Code available [here](https://code.visualstudio.com/)
+***
+
 ### Running the program:
 
 * Clone the repository or download the "analysis.py" file to your computer.
@@ -116,22 +140,6 @@ The Iris dataset contains two types of variables:
 * Now you can view the analysis images and txt files.
 
 ![View](img/view.png)
-
-***
-
-### References:
-
-* The data set found [on GitHub](https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv).
-* Information about plotting found [on RealPython](https://realpython.com/python-matplotlib-guide/#understanding-pltsubplots-notation).
-* Pandas guides on Pandas [1](https://pandas.pydata.org/docs/user_guide/index.html#user-guide), [2](https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe), [3](https://pandas.pydata.org/docs/user_guide/10min.html#plotting), [4](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html).
-* Information about the data set found on [Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set), [GeeksforGeeks](https://www.geeksforgeeks.org/iris-dataset/), [ARCCA](https://arcca.github.io/An-Introduction-to-Machine-Learning-Applications/03-scikit-learn-iris-dataset/index.html), [Embedded Robotics](https://www.embedded-robotics.com/iris-dataset-classification/), [scikit-learn](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html), [Towards Data Science](https://towardsdatascience.com/an-eda-walkthrough-the-iris-dataset-3f79246266c1).
-
-***
-
-### Technologies:
-
-* Python 3.11.5 available [here](https://www.anaconda.com/download)
-* Visual Studio Code available [here](https://code.visualstudio.com/)
 
 ***
 
