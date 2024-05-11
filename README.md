@@ -13,10 +13,9 @@ Author: Galal Abdelaziz
 
 ### Introduction:
 
-The __Iris dataset__ is one of the most well-known and commonly used datasets in the field of machine learning and statistics. Let’s dive into the details:
+The __Iris dataset__ is one of the most well-known and commonly used datasets in the field of machine learning and statistics. Here's an overview:
 
-* What is the Iris Dataset?
-The Iris dataset consists of __150 samples__ of iris flowers from three different species: __Setosa__, __Versicolor__, and __Virginica__.
+* The Iris dataset consists of __150 samples__ of iris flowers from three different species: __Setosa__, __Versicolor__, and __Virginica__.
 
 * Each sample includes __four features__:
 
@@ -74,6 +73,10 @@ The Iris dataset contains two types of variables:
 
 ### Analysis Key Findings:
 
+* Distribution:
+
+    * The data set have equal distribution between all three species (50 each).
+    
 * Species Separation:
 
     * The dataset exhibits clear separation between the three iris species: Setosa, Versicolor, and Virginica.
@@ -91,9 +94,13 @@ The Iris dataset contains two types of variables:
     * Setosa has the smallest petals, forming a tight cluster.
     * Versicolor and Virginica overlap more, but their petal dimensions still allow separation.
 
-* Correlation:
+* Relationships:
 
-    * There is a strong correlation between petal length and petal width for each species.
+    * Strong correlations exist between petal length and width, as well as sepal length and width, aiding in species classification.
+
+* Outlier Detection: 
+
+    * Some outliers are present, potentially indicating unique or anomalous specimens within the dataset.
 
 ***
 
