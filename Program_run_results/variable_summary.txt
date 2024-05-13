@@ -38,3 +38,21 @@ Maximum value: 2.5
 Mean value: 1.1993333333333336
 Standard deviation: 0.7622376689603465
 
+
+
+**** Extra Analysis ****
+
+Correlation matrix:
+
+              sepal_length  sepal_width  petal_length  petal_width
+sepal_length      1.000000    -0.117570      0.871754     0.817941
+sepal_width      -0.117570     1.000000     -0.428440    -0.366126
+petal_length      0.871754    -0.428440      1.000000     0.962865
+petal_width       0.817941    -0.366126      0.962865     1.000000
+
+Number of samples of each species:
+
+species
+setosa        50
+versicolor    50
+virginica     50

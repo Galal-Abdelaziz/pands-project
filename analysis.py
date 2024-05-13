@@ -17,19 +17,6 @@ data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 's
 ## Define a color palette
 palette = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}                      # Define colors for each species using dictionary.
 
-## Save a summary of each variable (combined and separate) to a text file.
-with open('variable_summary.txt', 'w') as f:                  # Generates a file named 'variable_summary.txt' on write mode.
-    f.write('**** Iris Data Set Analysis ****\n\n')           # Write a header to the file.
-    f.write('Overall Summary:\n\n')                           # Write a header to the file.
-    f.write(data.describe().to_string())                      # Write the summary statistics to the file.
-    f.write('\n\nSummary Of Each Variable:\n\n')              # Write a header to the file.
-    for column in data.columns[:-1]:                          # Iterate over each feature (column) in data DataFrame.
-        f.write('Variable: {}\n'.format(column))                         # Write the name of the variable to the file.
-        f.write('Minimum value: {}\n'.format(data[column].min()))        # Write the minimum value of the variable to the file.
-        f.write('Maximum value: {}\n'.format(data[column].max()))        # Write the maximum value of the variable to the file.
-        f.write('Mean value: {}\n'.format(data[column].mean()))          # Write the mean value of the variable to the file.
-        f.write('Standard deviation: {}\n\n'.format(data[column].std())) # Write the standard deviation value of the variable to the file.
-
 ## Save a histogram (colors for each species) of each variable to a png file.
 fig, axes = plt.subplots(2, 2, figsize=(10,10))               # Create a 2x2 grid of subplots.
 for ax, column in zip(axes.flatten(), data.columns[:-1]):     # Iterate over each feature (column) in data DataFrame.
@@ -75,12 +62,20 @@ plt.pie(data['species'].value_counts(), labels=data['species'].unique(), autopct
 plt.title('Number of Samples of Each Species')                   # Set the title of the plot.
 plt.savefig('number_of_samples.png')                             # Save the plot to a file named 'number_of_samples.png'.
 
-# Save the correlation matrix, mean and standard deviation, and number of samples of each species to a text file.
-with open('other_analysis.txt', 'w') as f:                       # Generates a file named 'other_analysis.txt' on write mode.
-    f.write('**** Extra Analysis ****\n\n')                      # Adding a header.
-    f.write('Correlation matrix:\n\n')
-    f.write(corr_matrix.to_string())
-    f.write('\n\nMean and standard deviation of each variable for each species:\n\n')
-    f.write(grouped.to_string())
-    f.write('\n\nNumber of samples of each species:\n\n')
-    f.write(data['species'].value_counts().to_string())
+## Save a summary of each variable (combined and separate) to a text file.
+with open('variable_summary.txt', 'w') as f:                  # Generates a file named 'variable_summary.txt' on write mode.
+    f.write('**** Iris Data Set Analysis ****\n\n')           # Write a header to the file.
+    f.write('Overall Summary:\n\n')                           # Write a header to the file.
+    f.write(data.describe().to_string())                      # Write the summary statistics to the file.
+    f.write('\n\nSummary Of Each Variable:\n\n')              # Write a header to the file.
+    for column in data.columns[:-1]:                          # Iterate over each feature (column) in data DataFrame.
+        f.write('Variable: {}\n'.format(column))                         # Write the name of the variable to the file.
+        f.write('Minimum value: {}\n'.format(data[column].min()))        # Write the minimum value of the variable to the file.
+        f.write('Maximum value: {}\n'.format(data[column].max()))        # Write the maximum value of the variable to the file.
+        f.write('Mean value: {}\n'.format(data[column].mean()))          # Write the mean value of the variable to the file.
+        f.write('Standard deviation: {}\n\n'.format(data[column].std())) # Write the standard deviation value of the variable to the file.
+    f.write('\n\n**** Extra Analysis ****\n\n')                          # Write a header to the file.
+    f.write('Correlation matrix:\n\n')                                   # Write a header to the file.
+    f.write(corr_matrix.to_string())                                     # Write the correlation matrix to the file.
+    f.write('\n\nNumber of samples of each species:\n\n')                # Write a header to the file.
+    f.write(data['species'].value_counts().to_string())                  # Write the Number of samples of each species to the file.
