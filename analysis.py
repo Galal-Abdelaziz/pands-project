@@ -17,10 +17,18 @@ data.columns = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 's
 ## Define a color palette
 palette = {'setosa': 'red', 'versicolor': 'green', 'virginica': 'blue'}                      # Define colors for each species using dictionary.
 
-## Save a summary of each variable to a text file.
+## Save a summary of each variable (combined and separate) to a text file.
 with open('variable_summary.txt', 'w') as f:                  # Generates a file named 'variable_summary.txt' on write mode.
-    f.write('Summary of each variable:\n\n')                  # Write a header to the file.
+    f.write('**** Iris Data Set Analysis ****\n\n')           # Write a header to the file.
+    f.write('Overall Summary:\n\n')                           # Write a header to the file.
     f.write(data.describe().to_string())                      # Write the summary statistics to the file.
+    f.write('\n\nSummary Of Each Variable:\n\n')              # Write a header to the file.
+    for column in data.columns[:-1]:                          # Iterate over each feature (column) in data DataFrame.
+        f.write('Variable: {}\n'.format(column))                         # Write the name of the variable to the file.
+        f.write('Minimum value: {}\n'.format(data[column].min()))        # Write the minimum value of the variable to the file.
+        f.write('Maximum value: {}\n'.format(data[column].max()))        # Write the maximum value of the variable to the file.
+        f.write('Mean value: {}\n'.format(data[column].mean()))          # Write the mean value of the variable to the file.
+        f.write('Standard deviation: {}\n\n'.format(data[column].std())) # Write the standard deviation value of the variable to the file.
 
 ## Save a histogram (colors for each species) of each variable to a png file.
 fig, axes = plt.subplots(2, 2, figsize=(10,10))               # Create a 2x2 grid of subplots.

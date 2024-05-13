@@ -1,4 +1,6 @@
-Summary of each variable:
+**** Iris Data Set Analysis ****
+
+Overall Summary:
 
        sepal_length  sepal_width  petal_length  petal_width
 count    150.000000   150.000000    150.000000   150.000000
@@ -9,3 +11,30 @@ min        4.300000     2.000000      1.000000     0.100000
 50%        5.800000     3.000000      4.350000     1.300000
 75%        6.400000     3.300000      5.100000     1.800000
 max        7.900000     4.400000      6.900000     2.500000
+
+Summary Of Each Variable:
+
+Variable: sepal_length
+Minimum value: 4.3
+Maximum value: 7.9
+Mean value: 5.843333333333334
+Standard deviation: 0.8280661279778629
+
+Variable: sepal_width
+Minimum value: 2.0
+Maximum value: 4.4
+Mean value: 3.0573333333333337
+Standard deviation: 0.435866284936698
+
+Variable: petal_length
+Minimum value: 1.0
+Maximum value: 6.9
+Mean value: 3.7580000000000005
+Standard deviation: 1.7652982332594667
+
+Variable: petal_width
+Minimum value: 0.1
+Maximum value: 2.5
+Mean value: 1.1993333333333336
+Standard deviation: 0.7622376689603465
+

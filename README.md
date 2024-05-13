@@ -11,11 +11,11 @@ Author: Galal Abdelaziz
 
 ***
 
-### Introduction:
+### Summary:
 
 The __Iris dataset__ is one of the most well-known and commonly used datasets in the field of machine learning and statistics. Here's an overview:
 
-* The Iris dataset consists of __150 samples__ of iris flowers from three different species: __Setosa__, __Versicolor__, and __Virginica__.
+* The Iris dataset consists of __150 samples__ of iris flowers from three different species: [Setosa](https://en.wikipedia.org/wiki/Iris_setosa), [Versicolor](https://en.wikipedia.org/wiki/Iris_versicolor), and [Virginica](https://en.wikipedia.org/wiki/Iris_virginica).
 
 * Each sample includes __four features__:
 
@@ -34,7 +34,7 @@ The target variable represents the species of the iris flower and has three clas
 
 * Notes:
 
-    * The dataset was introduced by the British biologist and statistician __Ronald Fisher__ in 1936 as an example of __discriminant analysis__.
+    * The dataset was introduced by the British biologist and statistician [Ronald Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher) in 1936 as an example of [discriminant analysis](https://en.wikipedia.org/wiki/Linear_discriminant_analysis).
     * Researchers and data scientists use the features of the iris flowers to classify each sample into one of the three species.
     * The dataset is particularly popular due to its __simplicity__ and the __clear separation__ of the different species based on the provided features.
 
@@ -46,7 +46,7 @@ The target variable represents the species of the iris flower and has three clas
 
 * Role in Machine Learning:
 
-    * The Iris dataset serves as a standard benchmark for testing __classification algorithms__.
+    * The Iris dataset serves as a standard benchmark for testing [classification algorithms](https://en.wikipedia.org/wiki/Statistical_classification#Algorithms).
     * Researchers use it to compare the performance of different algorithms and evaluate their accuracy, precision, and recall.
 
 ***
@@ -115,10 +115,10 @@ The Iris dataset contains two types of variables:
 
 ### Libraries:
 
-* __Pandas__: Imported the pandas library for data manipulation.
-* __Seaborn__: Imported the seaborn library for visualization.
-* __Matplotlib.pyplot__: Imported the matplotlib library for visualization.
-* __Warnings__: Imported the warnings library to suppress a warning message.
+* [Pandas](https://pandas.pydata.org): Imported the pandas library for data manipulation.
+* [Seaborn](https://seaborn.pydata.org): Imported the seaborn library for visualization.
+* [Matplotlib.pyplot](https://matplotlib.org/stable/tutorials/pyplot.html): Imported the matplotlib library for visualization.
+* [Warnings](https://docs.python.org/3/library/warnings.html): Imported the warnings library to suppress a warning message. 
 
 ***
 
@@ -130,7 +130,7 @@ The Iris dataset contains two types of variables:
 
 ### Running the program:
 
-* Clone the repository or download the "analysis.py" file to your computer.
+* Clone the repository or download the "analysis.py" file to your computer. (The dataset is preloaded via URL, so there's no need to download it separately.)
 
 ![Clone](img/clone.png)
 ![Download](img/download.png)
