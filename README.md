@@ -1,17 +1,27 @@
 # Pands-Project
 ***
+***
 
 Author: Galal Abdelaziz
 
 ## [Fisher’s Iris data set](https://archive.ics.uci.edu/dataset/53/iris) analysis, conducted by __Galal Abdelaziz__, is part of the Programming and Scripting module in Summer 2023/2024, at [ATU](https://www.atu.ie/).
 
 ***
+***
 
 ![Banner](img/Iris.png)
 
 ***
+***
 
-### Summary:
+### Analysis
+
+You can find the complete analysis [Here](Iris_analysis.ipynb); the following information is based on this analysis.
+
+***
+***
+
+#### Summary:
 
 The __Iris dataset__ is one of the most well-known and commonly used datasets in the field of machine learning and statistics. Here's an overview:
 
@@ -51,7 +61,7 @@ The target variable represents the species of the iris flower and has three clas
 
 ***
 
-### Variables: 
+#### Variables: 
 
 The Iris dataset contains two types of variables:
 
@@ -71,7 +81,7 @@ The Iris dataset contains two types of variables:
 
 ***
 
-### Analysis Key Findings:
+#### Analysis Key Findings:
 
 * Distribution:
 
@@ -107,6 +117,7 @@ The Iris dataset contains two types of variables:
     * Some outliers are present, potentially indicating unique or anomalous specimens within the dataset.
 
 ***
+***
 
 ### References:
 
@@ -115,6 +126,7 @@ The Iris dataset contains two types of variables:
 * Pandas guides on Pandas [1](https://pandas.pydata.org/docs/user_guide/index.html#user-guide), [2](https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe), [3](https://pandas.pydata.org/docs/user_guide/10min.html#plotting), [4](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html).
 * Information about the data set found on [Wikipedia](https://en.wikipedia.org/wiki/Iris_flower_data_set), [GeeksforGeeks](https://www.geeksforgeeks.org/iris-dataset/), [ARCCA](https://arcca.github.io/An-Introduction-to-Machine-Learning-Applications/03-scikit-learn-iris-dataset/index.html), [Embedded Robotics](https://www.embedded-robotics.com/iris-dataset-classification/), [scikit-learn](https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html), [Towards Data Science](https://towardsdatascience.com/an-eda-walkthrough-the-iris-dataset-3f79246266c1).
 
+***
 ***
 
 ### Libraries:
@@ -125,11 +137,14 @@ The Iris dataset contains two types of variables:
 * [Warnings](https://docs.python.org/3/library/warnings.html): Imported the warnings library to suppress a warning message. 
 
 ***
+***
 
 ### Technologies:
 
 * Python 3.11.5 available [here](https://www.anaconda.com/download)
 * Visual Studio Code available [here](https://code.visualstudio.com/)
+
+***
 ***
 
 ### Running the program:
@@ -152,6 +167,7 @@ The Iris dataset contains two types of variables:
 
 ![View](img/view.png)
 
+***
 ***
 
 ### End
