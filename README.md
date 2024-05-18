@@ -110,7 +110,8 @@ The Iris dataset contains two types of variables:
     
          * Petal Width and Petal Length.
          * Petal Length and Sepal Length.
-         * Petal Width and Sepal Length., aiding in species classification.
+         * Petal Width and Sepal Length.
+     * Aiding in species classification.
 
 * Outlier Detection: 
 
