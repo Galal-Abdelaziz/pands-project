@@ -96,7 +96,11 @@ The Iris dataset contains two types of variables:
 
 * Relationships:
 
-    * Strong correlations exist between petal length and width, as well as sepal length and width, aiding in species classification.
+     * The data analysis reveals strong correlations between the following:
+    
+         * Petal Width and Petal Length.
+         * Petal Length and Sepal Length.
+         * Petal Width and Sepal Length., aiding in species classification.
 
 * Outlier Detection: 
 
@@ -144,7 +148,7 @@ The Iris dataset contains two types of variables:
 
 ![Terminal](img/terminal.png)
 
-* Now you can view the analysis images and txt files.
+* Now you can view the analysis images and txt file.
 
 ![View](img/view.png)
 
