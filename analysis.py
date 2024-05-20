@@ -74,7 +74,7 @@ with open('variable_summary.txt', 'w') as f:                  # Generates a file
         f.write('Maximum value: {}\n'.format(data[column].max()))        # Write the maximum value of the variable to the file.
         f.write('Mean value: {}\n'.format(data[column].mean()))          # Write the mean value of the variable to the file.
         f.write('Standard deviation: {}\n\n'.format(data[column].std())) # Write the standard deviation value of the variable to the file.
-    f.write('\n\n**** Extra Analysis ****\n\n')                          # Write a header to the file.
+    f.write('**** Extra Analysis ****\n\n')                          # Write a header to the file.
     f.write('Correlation matrix:\n\n')                                   # Write a header to the file.
     f.write(corr_matrix.to_string())                                     # Write the correlation matrix to the file.
     f.write('\n\nNumber of samples of each species:\n\n')                # Write a header to the file.
